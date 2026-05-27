@@ -1,0 +1,41 @@
+# ---- Build ----
+build/
+*.o
+*.obj
+*.exe
+
+# ---- IDE & Tools ----
+.vscode/
+.learn-code-cache/
+.claude/
+
+# ---- Calibration (large, generated) ----
+models/calib_images/
+models/calib_images_640/
+models/calib.bin
+models/calib.table
+models/calib_list.txt
+test.img
+
+# ---- Model files (downloadable/regenerable, too large for git) ----
+models/*.engine
+models/*.onnx
+models/*.pt
+models/*.param
+models/*.bin
+models/yolov8n_ncnn_model/
+models/yolov8n_ncnn_int8_model/
+
+# ---- NCNN (not used on Jetson, infer via TensorRT engine) ----
+src/yolo_ncnn.cpp
+src/detect.cpp
+src/test_infer.cpp
+src/ncnn/
+
+# ---- Python cache ----
+__pycache__/
+*.pyc
+
+# ---- OS ----
+Thumbs.db
+.DS_Store
